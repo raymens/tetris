@@ -10,28 +10,45 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./public/blockrain.js">
 <script type="text/javascript">
-	function startGame() {
+	$(function() {
+	
+	$('button[name="start"]').click(function () {
+	
 		var speed = $('input[name=speed]').val();
 		
 		console.log('Starting with ' + speed);
 	
 		$('.game').blockrain({ speed: speed });
-	}
+	});
 	
     function updateSpeed(speed) {
 		console.log('Starting with ' + speed);
 	
 		$('.game').blockrain({ speed: speed });
 	}
+	
+	$('button[name="slow"]').click(function () {
+		updateSpeed(1);
+	});
+	
+	$('button[name="normal"]').click(function () {
+		updateSpeed(20);
+	});
+	
+	$('button[name="fast"]').click(function () {
+		updateSpeed(50);
+	});
+})();
+
 </script>
 
 <div class="game" style="width:250px; height:500px;"></div>
 <input type="number" name="speed" value="20" />
-<button type="button" onClick="startGame()" >Start</button>
+<button type="button" name="start">Start</button>
 
-<button type="button" onClick="updateSpeed(5)" >Slow</button>
-<button type="button" onClick="updateSpeed(20)" >Normal</button>
-<button type="button" onClick="updateSpeed(50)" >Fast</button>
+<button type="button" name="slow" >Slow</button>
+<button type="button" name="normal">Normal</button>
+<button type="button" name="fast" >Fast</button>
 
 
 

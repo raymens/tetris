@@ -9,7 +9,7 @@
 <!-- jQuery and Blockrain.js -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./public/blockrain.js">
-<script>
+<script type="text/javascript">
 	function startGame() {
 		var speed = $('input[name=speed]').val();
 		
@@ -23,7 +23,6 @@
 	
 		$('.game').blockrain({ speed: speed });
 	}
-	
 </script>
 
 <div class="game" style="width:250px; height:500px;"></div>

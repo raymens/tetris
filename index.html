@@ -9,7 +9,16 @@
 <!-- jQuery and Blockrain.js -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./public/blockrain.js">
-<script type="text/javascript">
+
+<div class="game" style="width:250px; height:500px;"></div>
+<input type="number" name="speed" value="20" />
+<button type="button" name="start">Start</button>
+
+<button type="button" name="slow" >Slow</button>
+<button type="button" name="normal">Normal</button>
+<button type="button" name="fast" >Fast</button>
+
+	<script type="text/javascript">
 	$(function() {
 	
 	$('button[name="start"]').click(function () {
@@ -41,15 +50,6 @@
 })();
 
 </script>
-
-<div class="game" style="width:250px; height:500px;"></div>
-<input type="number" name="speed" value="20" />
-<button type="button" name="start">Start</button>
-
-<button type="button" name="slow" >Slow</button>
-<button type="button" name="normal">Normal</button>
-<button type="button" name="fast" >Fast</button>
-
 
 
 </body>
